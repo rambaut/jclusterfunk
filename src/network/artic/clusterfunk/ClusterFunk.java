@@ -76,18 +76,18 @@ class ClusterFunk {
                         options.addOption(REPLACE);
                         options.addOption(IGNORE_MISSING);
                         break;
-                    case ASSIGN:
-                        options.addOption(INPUT);
-                        options.addOption(METADATA);
-                        options.addOption(OUTPUT_FILE);
-                        options.addOption(OUTPUT_FORMAT);
-                        options.addOption(OUTPUT_METADATA);
-                        options.addOption(INDEX_COLUMN);
-                        options.addOption(INDEX_FIELD);
-                        options.addOption(HEADER_DELIMITER);
-                        options.addOption(ATTRIBUTE);
-                        options.addOption(OUT_ATTRIBUTE);
-                        break;
+//                    case ASSIGN:
+//                        options.addOption(INPUT);
+//                        options.addOption(METADATA);
+//                        options.addOption(OUTPUT_FILE);
+//                        options.addOption(OUTPUT_FORMAT);
+//                        options.addOption(OUTPUT_METADATA);
+//                        options.addOption(INDEX_COLUMN);
+//                        options.addOption(INDEX_FIELD);
+//                        options.addOption(HEADER_DELIMITER);
+//                        options.addOption(ATTRIBUTE);
+//                        options.addOption(OUT_ATTRIBUTE);
+//                        break;
                     case CLUSTER:
                         options.addOption(INPUT);
                         options.addOption(OUTPUT_FILE);
@@ -270,15 +270,15 @@ class ClusterFunk {
                         options.addOption(OUTPUT_FILE);
                         options.addOption(STATISTICS);
                         break;
-                    case SUBCLUSTER:
-                        options.addOption(INPUT);
-                        options.addOption(OUTPUT_FILE);
-                        options.addOption(OUTPUT_FORMAT);
-                        options.addOption(OUTPUT_METADATA);
-                        options.addOption(ATTRIBUTE);
-                        options.addOption(CLUSTER_PREFIX);
-                        options.addOption(MIN_CLUSTER_SIZE);
-                        break;
+//                    case SUBCLUSTER:
+//                        options.addOption(INPUT);
+//                        options.addOption(OUTPUT_FILE);
+//                        options.addOption(OUTPUT_FORMAT);
+//                        options.addOption(OUTPUT_METADATA);
+//                        options.addOption(ATTRIBUTE);
+//                        options.addOption(CLUSTER_PREFIX);
+//                        options.addOption(MIN_CLUSTER_SIZE);
+//                        break;
                     case TMRCA:
                         options.addOption(INPUT);
                         options.addOption(TAXON_FILE);
@@ -366,22 +366,22 @@ class ClusterFunk {
                         commandLine.hasOption("ignore-missing"),
                         isVerbose);
                 break;
-            case ASSIGN:
-                new Assign(
-                        commandLine.getOptionValue("input"),
-                        commandLine.getOptionValue("metadata"),
-                        commandLine.getOptionValue("output"),
-                        format,
-                        commandLine.getOptionValue("output-metadata"),
-                        commandLine.getOptionValue("id-column", null),
-                        Integer.parseInt(commandLine.getOptionValue("id-field", "0")),
-                        commandLine.getOptionValue("field-delimeter", DEFAULT_DELIMITER),
-                        commandLine.getOptionValue("attribute"),
-                        commandLine.getOptionValue("out-attribute"),
-                        true,
-                        commandLine.hasOption("ignore-missing"),
-                        isVerbose);
-                break;
+//            case ASSIGN:
+//                new Assign(
+//                        commandLine.getOptionValue("input"),
+//                        commandLine.getOptionValue("metadata"),
+//                        commandLine.getOptionValue("output"),
+//                        format,
+//                        commandLine.getOptionValue("output-metadata"),
+//                        commandLine.getOptionValue("id-column", null),
+//                        Integer.parseInt(commandLine.getOptionValue("id-field", "0")),
+//                        commandLine.getOptionValue("field-delimeter", DEFAULT_DELIMITER),
+//                        commandLine.getOptionValue("attribute"),
+//                        commandLine.getOptionValue("out-attribute"),
+//                        true,
+//                        commandLine.hasOption("ignore-missing"),
+//                        isVerbose);
+//                break;
             case CLUSTER:
                 new Cluster(
                         commandLine.getOptionValue("input"),
@@ -611,17 +611,17 @@ class ClusterFunk {
                         commandLine.getOptionValues("stats"),
                         isVerbose);
                 break;
-            case SUBCLUSTER:
-                new Subcluster(
-                        commandLine.getOptionValue("input"),
-                        commandLine.getOptionValue("output"),
-                        format,
-                        commandLine.getOptionValue("output-metadata"),
-                        commandLine.getOptionValue("cluster-prefix"),
-                        commandLine.getOptionValue("attribute"),
-                        Integer.parseInt(commandLine.getOptionValue("min-size", "10")),
-                        isVerbose);
-                break;
+//            case SUBCLUSTER:
+//                new Subcluster(
+//                        commandLine.getOptionValue("input"),
+//                        commandLine.getOptionValue("output"),
+//                        format,
+//                        commandLine.getOptionValue("output-metadata"),
+//                        commandLine.getOptionValue("cluster-prefix"),
+//                        commandLine.getOptionValue("attribute"),
+//                        Integer.parseInt(commandLine.getOptionValue("min-size", "10")),
+//                        isVerbose);
+//                break;
             case TMRCA:
                 new TMRCA(
                         commandLine.getOptionValue("input"),

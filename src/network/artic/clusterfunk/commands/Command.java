@@ -152,7 +152,7 @@ abstract class Command {
             }
 
         } catch (IOException ioe) {
-            errorStream.println("Error reading tree file, " + treeFileName + ": " + ioe.getMessage());
+            errorStream.println("Error reading tree file: " + ioe.getMessage());
             System.exit(1);
         } catch (ImportException ie) {
             errorStream.println("Error parsing tree file, " + treeFileName + ": " + ie.getMessage());
